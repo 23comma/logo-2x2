@@ -42,6 +42,11 @@
             padding: 5px;
         }
 
+        table {
+            border: 3px solid white;
+            box-shadow: black 2px 2px 0px;
+        }
+
         table,
         tr,
         td {
@@ -89,8 +94,10 @@
             text-align: center;
             vertical-align: middle;
         }
-        #time{
-            font-size:medium;
+
+        #logo-image {
+            font-size: 50px;
+            font-weight: 100;
         }
     </style>
 </head>
@@ -99,9 +106,8 @@
     <table>
         <tr>
             <td id="logo" rowspan="2" colspan="2">
-                <div id="title">TITLE</div>
-                <div id="time">
-
+                <div id="title">
+                    <span id="logo-image">✨</span><span>TITLE</span>
                 </div>
             </td>
             <td id="electric" class="menu image">전기</td>
@@ -113,18 +119,6 @@
         </tr>
     </table>
     <script>
-        function getCurrentTimeShort() {
-            return new Intl.DateTimeFormat('ko-KR', {
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-                hour12: false
-            }).format(new Date());
-        }
-        let time = document.getElementById('time');
-        setInterval(function () {   
-            time.innerHTML = getCurrentTimeShort();
-        },1000)
     </script>
 </body>
 
